@@ -1,2 +1,2 @@
 #!/system/bin/sh
-log -p i -t start "Welcome to Android `getprop ro.build.version.release` / Euphoria-Mod-`getprop ro.em.version`";
+log -p i -t start "Welcome to Android `getprop ro.build.version.release` / KaronOS-`getprop ro.em.version`";

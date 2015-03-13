@@ -27,27 +27,27 @@ endif
 # Backup Tool
 ifneq ($(WITH_GMS),true)
 PRODUCT_COPY_FILES += \
-    vendor/eos/prebuilt/common/bin/50-eos.sh:system/addon.d/50-eos.sh \
-    vendor/eos/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/eos/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions
+    vendor/kos/prebuilt/common/bin/50-kos.sh:system/addon.d/50-kos.sh \
+    vendor/kos/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/kos/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions
 endif
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/eos/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/eos/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/kos/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/kos/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # userinit support
 PRODUCT_COPY_FILES += \
-    vendor/eos/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
+    vendor/kos/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
 
 # init file
 PRODUCT_COPY_FILES += \
-    vendor/eos/prebuilt/common/etc/init.eos.rc:root/init.eos.rc
+    vendor/kos/prebuilt/common/etc/init.kos.rc:root/init.kos.rc
 
 # Copy latinime for gesture typing
 PRODUCT_COPY_FILES += \
-    vendor/eos/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+    vendor/kos/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -86,9 +86,9 @@ PRODUCT_PACKAGES += \
     org.cyanogenmod.hardware.xml
 
 # T-Mobile theme engine
-include vendor/eos/config/themes_common.mk
+include vendor/kos/config/themes_common.mk
 
-PRODUCT_PACKAGE_OVERLAYS += vendor/eos/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/kos/overlay/common
 
 # Inherit common product build prop overrides
--include vendor/eos/config/common_versions.mk
+-include vendor/kos/config/common_versions.mk
