@@ -91,4 +91,4 @@ include vendor/kos/config/themes_common.mk
 PRODUCT_PACKAGE_OVERLAYS += vendor/kos/overlay/common
 
 # Inherit common product build prop overrides
--include vendor/kos/config/common_versions.mk
+-include vendor/kos/config/versions.mk
